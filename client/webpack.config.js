@@ -1,10 +1,10 @@
-const path = require("path");
+const path = require('path');
 
 module.exports = {
-  entry: "./src/index.js",
+  entry: './src/index.js',
   output: {
-    path: path.join(__dirname + "/dist"),
-    filename: "bundle.js"
+    path: path.join(__dirname + '/dist'),
+    filename: 'bundle.js'
   },
   module: {
     rules: [
@@ -12,34 +12,34 @@ module.exports = {
         test: /\.js$/,
         exclude: /(node_modules)/,
         use: {
-          loader: "babel-loader",
+          loader: 'babel-loader',
           options: {
-            presets: ["react", "env"],
-            plugins: [require("babel-plugin-transform-object-rest-spread")]
+            presets: ['react', 'env'],
+            plugins: [require('babel-plugin-transform-object-rest-spread')]
           }
         }
       },
       {
         test: /\.css$/,
-        use: ["style-loader", "css-loader"]
+        use: ['style-loader', 'css-loader']
       },
       {
         test: /\.scss$/,
-        use: ["sass-loader"]
+        use: ['sass-loader']
       },
       {
         test: /\.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
-        loader: "file-loader?name=fonts/[name].[ext]"
+        loader: 'file-loader?name=fonts/[name].[ext]'
       }
     ]
   },
   devServer: {
-    contentBase: path.join(__dirname, "/dist"),
+    contentBase: path.join(__dirname, '/dist'),
     compress: true,
     port: 9999,
     historyApiFallback: {
-      index: "index.html"
+      index: 'index.html'
     }
   },
-  devtool: "#source-map"
+  devtool: '#source-map'
 };

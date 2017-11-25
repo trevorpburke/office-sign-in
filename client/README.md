@@ -6,24 +6,25 @@
 
 * Must have Node / NPM installed
 
+```shell
+cd client
+```
+
 ### Install
 
 ```shell
-cd client
 npm install
 ```
 
 ### Build
 
 ```shell
-cd client
 npm run build
 ```
 
 ### Run
 
 ```shell
-cd client
 npm start
 ```
 
