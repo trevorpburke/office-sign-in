@@ -1,6 +1,10 @@
-import React from 'react';
+import * as React from 'react';
 
-export default props => {
+type Props = {
+  value: string
+};
+
+export default (props: Props) => {
   const buttonStyle = {
     margin: '1rem auto',
     padding: '0.5rem 1rem',

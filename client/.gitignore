@@ -60,3 +60,6 @@ typings/
 # dist directory
 dist/*
 !dist/index.html
+
+# vscode
+.vscode
